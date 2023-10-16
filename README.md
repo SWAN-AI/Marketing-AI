@@ -43,12 +43,7 @@ To set up the project, follow these steps:
 To run the project, you can use the provided Jupyter notebooks in the `notebooks/` directory. Each notebook focuses on a specific aspect of the project, such as data analysis, text modeling, image processing, and multimodal modeling. Follow the instructions in the notebooks to execute the code and reproduce the results.
 
 To run a file please use this :
-     `python mmbt/train.py --batch_sz 4 --gradient_accumulation_steps 40 \
-     --savedir/result /path/to/savedir/ --name mmbt_model_run \
-     --data_path /path/to/datasets/ \
-     --task food101 --task_type classification \
-     --model mmbt --num_image_embeds 3 --freeze_txt 5 --freeze_img 3  \
-     --patience 5 --dropout 0.1 --lr 5e-05 --warmup 0.1 --max_epochs 100 --seed 1`
+`python mmbt/train.py --batch_sz 4 --gradient_accumulation_steps 40 --savedir/result /path/to/savedir/ --name mmbt_model_run --data_path /path/to/datasets --task food101 --task_type classification --model mmbt --num_image_embeds 3 --freeze_txt 5 --freeze_img 3  --patience 5 --dropout 0.1 --lr 5e-05 --warmup 0.1 --max_epochs 100 --seed 1`
 
 <!-- """python train_MMBT_ConceptNet_cuda.py --batch_sz 4 --gradient_accumulation_steps 40 --savedir results_9_6/ --name mmbt_model_run 
 --data_path kickstarter_data --model mmbt --num_image_embeds 3 --freeze_txt 5 --freeze_img 3 --max_epochs 5 """
