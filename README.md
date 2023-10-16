@@ -42,6 +42,24 @@ To set up the project, follow these steps:
 ## Usage
 To run the project, you can use the provided Jupyter notebooks in the `notebooks/` directory. Each notebook focuses on a specific aspect of the project, such as data analysis, text modeling, image processing, and multimodal modeling. Follow the instructions in the notebooks to execute the code and reproduce the results.
 
+To run a file please use this :
+     `python mmbt/train.py --batch_sz 4 --gradient_accumulation_steps 40 \
+     --savedir/result /path/to/savedir/ --name mmbt_model_run \
+     --data_path /path/to/datasets/ \
+     --task food101 --task_type classification \
+     --model mmbt --num_image_embeds 3 --freeze_txt 5 --freeze_img 3  \
+     --patience 5 --dropout 0.1 --lr 5e-05 --warmup 0.1 --max_epochs 100 --seed 1`
+
+<!-- """python train_MMBT_ConceptNet_cuda.py --batch_sz 4 --gradient_accumulation_steps 40 --savedir results_9_6/ --name mmbt_model_run 
+--data_path kickstarter_data --model mmbt --num_image_embeds 3 --freeze_txt 5 --freeze_img 3 --max_epochs 5 """
+
+# for windows machine gpu 6 - I4I
+# python train_MMBT_cuda.py --batch_sz 64 --gradient_accumulation_steps 40 --savedir results_mmbt_12_9/ --name mmbt_model_run --data_path C:\Users\tpadhi1\Desktop\Adobe\mmbt-kg\kickstarter_dataset_processed --model mmbt --num_image_embeds 3 --freeze_txt 5 --freeze_img 3 --max_epochs 50
+
+# for vision transformer
+# python train_MMBT_ViT_Bert.py --batch_sz 32 --img_hidden_sz 768 --gradient_acuumulation_steps 40 --gradient_accumulation_steps 40 --savedir test --name mmbt_model_run --data_path C:\Users\tpadhi1\Desktop\Adobe\mmbt-kg\data_prep_codes\Experiments\Transe --model mmbt --num_image_embeds 197 --freeze_txt 5 --freeze_img 3 --max_epochs 50
+# python train_BLIP.py --batch_sz 16  --gradient_accumulation_steps 40 --savedir test --name mmbt_model_run --data_path C:\Users\tpadhi1\Desktop\Adobe\mmbt-kg\data_prep_codes\Experiments\Transe --model mmbt --max_epochs 50 -->
+
 ## Results
 The project aims to achieve accurate predictions of marketing campaign success using multimodal data. The final model's performance is evaluated using appropriate metrics, and the results are presented in the notebooks or in a separate evaluation report.
 
