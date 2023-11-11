@@ -233,7 +233,7 @@ def store_preds_to_disk(tgts, preds, args):
 def log_metrics(set_name, metrics, args, logger):
     if args.task_type == "multilabel":
         logger.info(
-            "{}: Loss: {:.5f} | Acc: {:.5f}  | Macro_rec: {:.5f} | Micro_rec: {:.5f} | Macro_prec: {:.5f} | Micro_prec: {:.5f} | Class_rep:".format(
+            "{}: Loss: {:.5f} | Acc: {:.5f}  | Macro_rec: {:.5f} | Micro_rec: {:.5f} | Macro_prec: {:.5f} | Micro_prec: {:.5f} | Class_rep: {}".format(
                 set_name, metrics["loss"], metrics["acc"], metrics["macro_precision"], metrics["micro_precision"], metrics["macro_recall"], metrics["micro_recall"],
             metrics['class_rep'] #new
             #"{}: Loss: {:.5f} | Macro F1 {:.5f} | Micro F1: {:.5f}".format(
@@ -248,7 +248,7 @@ def log_metrics(set_name, metrics, args, logger):
       #  )
     else: #new
         logger.info(
-            "{}: Loss: {:.5f} | Acc: {:.5f}  | Macro_rec: {:.5f} | Micro_rec: {:.5f} | Macro_prec: {:.5f} | Micro_prec: {:.5f} | Class_rep:".format(
+            "{}: Loss: {:.5f} | Acc: {:.5f}  | Macro_rec: {:.5f} | Micro_rec: {:.5f} | Macro_prec: {:.5f} | Micro_prec: {:.5f} | Class_rep:{}".format(
                 set_name, metrics["loss"], metrics["acc"], metrics["macro_precision"], metrics["micro_precision"], metrics["macro_recall"], metrics["micro_recall"],
             metrics['class_rep']  
             ) # new
@@ -463,7 +463,7 @@ def model_eval(data, model, args, criterion, store_preds=True): # new, store_pre
         metrics["micro_recall"] = precision_score(tgts, preds, average='micro') # new
         metrics["micro_precision"] = recall_score(tgts, preds, average='micro') # new
         metrics["micro_precision"] = recall_score(tgts, preds, average='micro') # new
-        metrics["class_rep"] = classification_report(tgts, preds, average='micro') # new
+        metrics["class_rep"] = classification_report(tgts, preds) # new
 
     #classification_report(y_true, , target_names=target_names)
 
@@ -569,8 +569,8 @@ def train(args):
     load_checkpoint(model, os.path.join(args.savedir, "model_best.pt"))
     model.eval()
     for test_name, test_loader in test_loaders.items():
-        test_metrics = model_eval(
-            np.inf, test_loader, model, args, criterion, store_preds=True
+        test_metrics = model_eval( #np.inf,  # new
+             test_loader, model, args, criterion, store_preds=True
         )
         log_metrics(f"Test - {test_name}", test_metrics, args, logger)
     
