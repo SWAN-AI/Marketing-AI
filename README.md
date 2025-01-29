@@ -1,7 +1,7 @@
 # Marketing-AI  
 ## Multimodal Marketing Success Prediction  
 
-This project aims to predict the success of marketing campaigns using **multimodal data**. By combining various types of data, such as **text, images, and numerical features**, we build a predictive model that helps identify the most effective marketing strategies.  
+This project aims to predict the success of marketing campaigns using **multimodal data**. By combining data, such as **text and images** with commonsence knowledge from Knowledge Graphs, we build a predictive model that helps identify the most effective marketing strategies.  
 
 📄 **Related Paper:**  
 Our research on this topic has been published on **arXiv**. You can read the full paper here:  
