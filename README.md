@@ -1,7 +1,11 @@
-# Marketing-AI
-# Multimodal Marketing Success Prediction
+# Marketing-AI  
+## Multimodal Marketing Success Prediction  
 
-This project aims to predict the success of marketing campaigns using multimodal data. By combining various types of data, such as text, images, and numerical features, we can build a predictive model that helps identify the most effective marketing strategies.
+This project aims to predict the success of marketing campaigns using **multimodal data**. By combining various types of data, such as **text, images, and numerical features**, we build a predictive model that helps identify the most effective marketing strategies.  
+
+📄 **Related Paper:**  
+Our research on this topic has been published on **arXiv**. You can read the full paper here:  
+[🔗 Enhancing Cross-Modal Contextual Congruence for Crowdfunding Success using Knowledge-infused Learning](https://arxiv.org/abs/2402.03607)
 
 ## Table of Contents
 - [Introduction](#introduction)
