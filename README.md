@@ -61,5 +61,13 @@ The project aims to achieve accurate predictions of marketing campaign success u
 ## Contributing
 Contributions to this project are welcome! If you have any ideas, suggestions, or improvements, please create an issue or submit a pull request.
 
+@inproceedings{padhi2024enhancing,
+  author    = {Trilok Padhi and others},
+  title     = {Enhancing Cross-Modal Contextual Congruence for Crowdfunding Success using Knowledge-infused Learning},
+  booktitle = {2024 IEEE International Conference on Big Data (BigData)},
+  publisher = {IEEE},
+  year      = {2024}
+}
+
 ## License
 This project is licensed under the [MIT License](LICENSE).
